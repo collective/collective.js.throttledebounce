@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 version = '1.0'
+maintainer = 'Jonas Baumann'
 
 setup(name='collective.js.throttledebounce',
       version=version,
@@ -13,10 +14,10 @@ setup(name='collective.js.throttledebounce',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Victor BAUMANN',
-      author_email='v.baumann@4teamwork.ch',
+      author='%s, 4teamwork GmbH',
+      author_email='mailto:info@4teamwork.ch',
       url='',
-      license='GPL',
+      license='GPL2',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.js'],
       include_package_data=True,
