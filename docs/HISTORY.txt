@@ -5,6 +5,9 @@ Changelog
 1.1
 ---
 
+* Release on pypi / moved to github
+  [jbaumann]
+
 
 
 1.0
