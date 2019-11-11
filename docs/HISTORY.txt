@@ -5,6 +5,7 @@ Changelog
 1.2
 ---
 
+* Add plone 5 support [Nachtalb]
 
 
 1.1

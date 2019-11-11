@@ -11,7 +11,10 @@ setup(name='collective.js.throttledebounce',
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Programming Language :: Python",
+        'Programming Language :: Python',
+        'Framework :: Plone',
+        'Framework :: Plone :: 4.3',
+        'Framework :: Plone :: 5.1',
         ],
       keywords='',
       author='Jonas Baumann, 4teamwork GmbH',
