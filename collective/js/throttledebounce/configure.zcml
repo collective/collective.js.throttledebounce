@@ -1,19 +1,32 @@
-<configure 
-    xmlns="http://namespaces.zope.org/zope"     
-    xmlns:browser="http://namespaces.zope.org/browser" 
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup" 
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.js.throttledebounce">
 
     <five:registerPackage package="." />
 
-    <genericsetup:registerProfile 
-        name="default" 
-        title="collective.js.throttledebounce"
-        directory="profiles/default" 
-        description="throttle / debounce plugin"
-        provides="Products.GenericSetup.interfaces.EXTENSION" 
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+    <configure zcml:condition="not-have plone-5">
+      <genericsetup:registerProfile
+          name="default"
+          title="collective.js.throttledebounce"
+          directory="profiles/default"
+          description="throttle / debounce plugin"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+    </configure>
+
+    <configure zcml:condition="have plone-5">
+      <genericsetup:registerProfile
+          name="default"
+          title="collective.js.throttledebounce"
+          directory="profiles/default-plone5"
+          description="throttle / debounce plugin"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+    </configure>
 
     <browser:resource
         name="jquery.ba-throttle-debounce.js"
