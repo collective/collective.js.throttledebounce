@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<registry>
+  <records prefix="plone.resources/throttledebounce"
+    interface="Products.CMFPlone.interfaces.IResourceRegistry">
+    <value key="js">++resource++jquery.ba-throttle-debounce.js</value>
+    <value key="deps">jquery</value>
+  </records>
+
+  <records prefix="plone.bundles/collective-js-throttledebounce-resources"
+    interface="Products.CMFPlone.interfaces.IBundleRegistry">
+    <value key="resources">
+      <element>throttledebounce</element>
+    </value>
+
+    <value key="enabled">True</value>
+    <value key="depends">plone-legacy</value>
+    <value key="compile">False</value>
+    <value key="jscompilation">++plone++collective.js.throttledebounce/collective.js.throttledebounce-compiled.js</value>
+    <value key="merge_with">default</value>
+  </records>
+</registry>
