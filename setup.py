@@ -30,7 +30,9 @@ setup(name='collective.js.throttledebounce',
       namespace_packages=['collective', 'collective.js'],
       include_package_data=True,
       zip_safe=False,
-      install_requires=[],
+      install_requires=[
+          'ftw.upgrade',
+      ],
       tests_require=tests_require,
       extras_require={'tests': tests_require},
       entry_points="""

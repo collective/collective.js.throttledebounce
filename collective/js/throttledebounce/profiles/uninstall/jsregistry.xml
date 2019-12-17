@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
-  <javascript id="++resource++jquery.ba-throttle-debounce.js" remove="True" />
+
+  <javascript id="++resource++collective.js.throttledebounce/throttledebounce.js" remove="True" />
+
 </object>

@@ -5,6 +5,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
+- Move JS to a resource directory. [jone]
+
 - Add uninstall profile. [jone]
 
 
