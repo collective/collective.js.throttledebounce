@@ -5,6 +5,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
+- Plone 5: provide precompiled bundle. [jone]
+
 - Move JS to a resource directory. [jone]
 
 - Add uninstall profile. [jone]

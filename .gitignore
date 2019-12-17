@@ -4,10 +4,14 @@
 /*.egg-info
 /.installed.cfg
 /.mr.developer.cfg
+/.yarn-integrity
 /bin/
 /buildout.cfg
 /develop-eggs/
 /eggs/
+/node_modules/
 /parts/
 /src/
 /var/
+/yarn-debug.log*
+/yarn-error.log*
