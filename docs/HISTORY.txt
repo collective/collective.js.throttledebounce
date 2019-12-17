@@ -5,7 +5,11 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone 5: provide precompiled bundle. [jone]
+
+- Move JS to a resource directory. [jone]
+
+- Add uninstall profile. [jone]
 
 
 1.2.0 (2019-11-11)

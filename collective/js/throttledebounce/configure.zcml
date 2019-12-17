@@ -3,10 +3,13 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.js.throttledebounce">
 
     <five:registerPackage package="." />
+
+    <include package="ftw.upgrade" file="meta.zcml" />
 
     <configure zcml:condition="not-have plone-5">
       <genericsetup:registerProfile
@@ -16,20 +19,44 @@
           description="throttle / debounce plugin"
           provides="Products.GenericSetup.interfaces.EXTENSION"
           for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+
+      <genericsetup:registerProfile
+          name="uninstall"
+          title="Uninstall collective.js.throttledebounce"
+          directory="profiles/uninstall"
+          description="Uninstalls the ftw.file package"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+          />
     </configure>
 
     <configure zcml:condition="have plone-5">
       <genericsetup:registerProfile
           name="default"
           title="collective.js.throttledebounce"
-          directory="profiles/default-plone5"
+          directory="profiles/default_plone5"
           description="throttle / debounce plugin"
           provides="Products.GenericSetup.interfaces.EXTENSION"
           for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+
+      <genericsetup:registerProfile
+          name="uninstall"
+          title="Uninstall collective.js.throttledebounce"
+          directory="profiles/uninstall_plone5"
+          description="Uninstalls the ftw.file package"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+          />
     </configure>
 
-    <browser:resource
-        name="jquery.ba-throttle-debounce.js"
-        file="jquery.ba-throttle-debounce.js" />
+    <upgrade-step:directory
+        profile="collective.js.throttledebounce:default"
+        directory="upgrades"
+        />
+
+    <browser:resourceDirectory
+        name="collective.js.throttledebounce"
+        directory="resources"
+        />
 
 </configure>

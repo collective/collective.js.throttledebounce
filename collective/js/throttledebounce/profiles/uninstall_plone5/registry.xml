@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records prefix="plone.bundles/collective-js-throttledebounce-resources"
+           interface="Products.CMFPlone.interfaces.IBundleRegistry"
+           remove="True" />
+
+</registry>
