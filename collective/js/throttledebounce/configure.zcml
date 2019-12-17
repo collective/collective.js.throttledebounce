@@ -16,6 +16,15 @@
           description="throttle / debounce plugin"
           provides="Products.GenericSetup.interfaces.EXTENSION"
           for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+
+      <genericsetup:registerProfile
+          name="uninstall"
+          title="Uninstall collective.js.throttledebounce"
+          directory="profiles/uninstall"
+          description="Uninstalls the ftw.file package"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+          />
     </configure>
 
     <configure zcml:condition="have plone-5">
@@ -26,6 +35,15 @@
           description="throttle / debounce plugin"
           provides="Products.GenericSetup.interfaces.EXTENSION"
           for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+
+      <genericsetup:registerProfile
+          name="uninstall"
+          title="Uninstall collective.js.throttledebounce"
+          directory="profiles/uninstall_plone5"
+          description="Uninstalls the ftw.file package"
+          provides="Products.GenericSetup.interfaces.EXTENSION"
+          for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+          />
     </configure>
 
     <browser:resource

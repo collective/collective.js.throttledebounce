@@ -3,6 +3,11 @@ import os
 
 version = '1.2.1.dev0'
 
+tests_require = [
+    'ftw.testing',
+    'plone.app.testing',
+]
+
 setup(name='collective.js.throttledebounce',
       version=version,
       description="Installs the throttle / debounce plugin",
@@ -25,10 +30,9 @@ setup(name='collective.js.throttledebounce',
       namespace_packages=['collective', 'collective.js'],
       include_package_data=True,
       zip_safe=False,
-      install_requires=[
-        'setuptools',
-        # -*- Extra requirements: -*-
-        ],
+      install_requires=[],
+      tests_require=tests_require,
+      extras_require={'tests': tests_require},
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
