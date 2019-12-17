@@ -22,7 +22,7 @@
       <genericsetup:registerProfile
           name="default"
           title="collective.js.throttledebounce"
-          directory="profiles/default-plone5"
+          directory="profiles/default_plone5"
           description="throttle / debounce plugin"
           provides="Products.GenericSetup.interfaces.EXTENSION"
           for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
