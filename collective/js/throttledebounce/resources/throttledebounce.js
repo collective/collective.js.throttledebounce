@@ -74,7 +74,7 @@
   '$:nomunge'; // Used by YUI compressor.
 
     // Internal method reference.
-    jq_throttle;
+    var jq_throttle;
 
   // Method: jQuery.throttle
   //
